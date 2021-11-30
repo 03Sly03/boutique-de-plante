@@ -1,0 +1,19 @@
+.bdpc-banner {
+	color: green;
+	text-align: right;
+	padding: 32px;
+	border-bottom: solid 3px black;
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: row;
+	align-items: center;
+}
+
+.bdpc-title {
+	padding-left: 32px;
+}
+
+.bdpc-logo {
+	height: 45px;
+	width: 45px;
+}
