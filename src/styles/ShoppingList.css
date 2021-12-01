@@ -1,4 +1,4 @@
-.lmj-plant-list {
+.bdpc-plant-list {
 	list-style-type: none;
 	padding: 32px;
 	display: flex;
@@ -6,7 +6,7 @@
 	max-width: 800px;
 }
 
-.lmj-plant-item {
+.bdpc-plant-item {
 	border: solid 2px black;
 	border-radius: 10px;
 	height: 150px;
@@ -19,7 +19,7 @@
 	position: relative;
 }
 
-.lmj-sales {
+.bdpc-sales {
 	position: absolute;
 	right: 0px;
 	top: 10px;
@@ -27,4 +27,14 @@
 	color: white;
 	padding: 5px 10px;
 	background-color: #31b572;
+}
+
+.bdpc-best-sale {
+	position: absolute;
+	left: 0px;
+	top: 10px;
+	font-weight: 500;
+	color: white;
+	padding: 5px 10px;
+	background-color: red;
 }
