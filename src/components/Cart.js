@@ -1,19 +1,23 @@
-import '../styles/Cart.css';
+import React from "react";
 
-function Cart() {
-    const monsteraPrice = 8
-    const ivyPrice = 10
-    const flowerPrice = 15
-    const total = monsteraPrice + ivyPrice + flowerPrice
+function Cart({ cart, updateCart }) {
+    const total = cart.reduce(
+        (acc, plantType) => acc + plantType.amount * plantType.price, 0
+    )
+
     return (
         <div className='bdpc-cart'>
             <h2>Panier</h2>
-            <ul>
-                <li>Monstera : { monsteraPrice }€</li>
-                <li>Lierre : { ivyPrice }€</li>
-                <li>Bouquet de fleurs : { flowerPrice }€</li>
-                    </ul>
-            <p>TOTAL : { total }€</p>
+                {
+                    cart.map(({ name, price, amount }, index) => (
+                        <div key={`${name}-${index}`}>{name} {price}€ x {amount}</div>
+                    ))
+                }
+
+            <p>TOTAL : {total}€</p>
+            <div className="bdpc-cart__btn-frame">
+            <button className="bdpc-cart__btn" onClick={() => updateCart([])}>Vider le panier</button>
+            </div>
         </div>
     )
 }

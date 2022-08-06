@@ -1,4 +1,3 @@
-import '../styles/Banner.css'
 import logo from '../assets/logo-bdpc.png'
 
 function Banner() {
@@ -13,10 +12,8 @@ function Banner() {
     
     return (
     <div className='bdpc-banner'>
-        <div className='bdpc-banner-row'>
             <img src={logo} alt='boutique de plante carnivore' className='bdpc-logo' />
             <h1 className='bdpc-title'>{ title.toUpperCase() }</h1>
-        </div>
         <div>
             {recommendation}
         </div>

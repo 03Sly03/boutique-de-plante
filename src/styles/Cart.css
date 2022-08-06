@@ -2,4 +2,22 @@
     padding: 32px;
     color: white;
     background-color: #31b572;
+    min-width: 200px;
+}
+
+.bdpc-cart__btn-frame {
+    display: flex;
+    justify-content: center;
+}
+
+.bdpc-cart__btn {
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.bdpc-cart__btn:hover {
+    background-color: pink;
+    color: red;
 }

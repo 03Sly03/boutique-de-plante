@@ -1,27 +1,35 @@
 import { plantList } from '../datas/plantList.js';
-import '../styles/ShoppingList.css'
+import PlantItem from './PlantItem.js';
 
-function ShoppingList() {
+function ShoppingList({ cart, updateCart }) {
     const categories = plantList.reduce(
         (acc, plant) => acc.includes(plant.category) ? acc : acc.concat(plant.category),
-		[]
-        )
+        []
+    );
 
     return (
         <div>
-            <h2>Catégories</h2>
             <ul>
-                {categories.map((cat) => (
-					<li key={cat}>{cat}</li>
-				))}
+                {categories.map((cat, index) => (
+                    <li key={`${cat}-${index}`}>{cat}</li>
+                ))}
             </ul>
-            <h2>Listes des plantes</h2>
             <ul className='bdpc-plant-list'>
-                {plantList.map((plant) => (
-                    <li key={plant.id} className='bdpc-plant-item'>
-                        {plant.name} {plant.isBestSale && plant.category === "classique" && <div className='bdpc-best-sale'>Best Sale !</div>}
-                        {plant.isSpecialOffer ? <div className='bdpc-sales'>En solde !</div> : null}
-                    </li>
+                {plantList.map(({ id, category, cover, name, water, light, price, isSpecialOffer, isBestSale }) => (
+                    <PlantItem
+                        key={id + name}
+                        id={id}
+                        category={category}
+                        cover={cover}
+                        name={name}
+                        water={water}
+                        light={light}
+                        price={price}
+                        isSpecialOffer={isSpecialOffer}
+                        isBestSale={isBestSale}
+                        updateCart={updateCart}
+                        cart={cart}
+                    />
                 ))}
             </ul>
         </div>
