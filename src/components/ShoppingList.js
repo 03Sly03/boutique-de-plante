@@ -1,21 +1,14 @@
-import { plantList } from '../datas/plantList.js';
+import Categories from './Categories.js';
 import PlantItem from './PlantItem.js';
 
-function ShoppingList({ cart, updateCart }) {
-    const categories = plantList.reduce(
-        (acc, plant) => acc.includes(plant.category) ? acc : acc.concat(plant.category),
-        []
-    );
-
+function ShoppingList({ cart, updateCart, addToCart, sortByCategory, plants, addCategoryToShop }) {
     return (
-        <div>
-            <ul>
-                {categories.map((cat, index) => (
-                    <li key={`${cat}-${index}`}>{cat}</li>
-                ))}
-            </ul>
+        <div className='shopping-list'>
+            <div className="shopping-list__select-category-btn">
+                <Categories sortByCategory={sortByCategory} addCategoryToShop={addCategoryToShop} />
+            </div>
             <ul className='bdpc-plant-list'>
-                {plantList.map(({ id, category, cover, name, water, light, price, isSpecialOffer, isBestSale }) => (
+                {plants.map(({ id, category, cover, name, water, light, price, isSpecialOffer, isBestSale }) => (
                     <PlantItem
                         key={id + name}
                         id={id}
@@ -27,8 +20,7 @@ function ShoppingList({ cart, updateCart }) {
                         price={price}
                         isSpecialOffer={isSpecialOffer}
                         isBestSale={isBestSale}
-                        updateCart={updateCart}
-                        cart={cart}
+                        addToCart={addToCart}
                     />
                 ))}
             </ul>

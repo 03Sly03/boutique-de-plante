@@ -1,3 +1,13 @@
+/* .shopping-list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+} */
+
+.shopping-list__select-category-btn {
+	margin-left: 40px;
+}
+
 .bdpc-plant-list {
 	list-style-type: none;
 	padding: 32px;

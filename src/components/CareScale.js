@@ -22,7 +22,7 @@ function CareScale({scaleValue, careType}) {
     }
 
   return (
-    <div className='light-and-water' onClick={() => handleCareTypePlantInfos(scaleValue, careType)}>
+    <div className='light-and-water light-and-water__tooltip' onClick={() => handleCareTypePlantInfos(scaleValue, careType)}>
         {
             range.map(rangElement => scaleValue >= rangElement ? <span key={rangElement.toString()}>{type}</span> : null)
         }

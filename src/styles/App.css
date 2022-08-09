@@ -6,6 +6,7 @@
 @import './shoppingList.css';
 @import './questionForm.css';
 @import './footer.css';
+@import './categories.css';
 
 .shop {
     display: flex;

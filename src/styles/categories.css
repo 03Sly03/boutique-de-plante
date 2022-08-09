@@ -1,0 +1,22 @@
+.categories__select {
+    margin-top: 50px;
+    border: none;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: green;
+    color: white;
+    text-align: center;
+}
+
+.categories__select:hover {
+    background-color: lightgreen;
+}
+
+.categories__reset-btn {
+    margin-left: 20px;
+}
+
+.categories__reset-btn:hover {
+    font-size: 1.2rem;
+    cursor: pointer;
+}

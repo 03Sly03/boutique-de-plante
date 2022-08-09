@@ -1,3 +1,32 @@
 .light-and-water {
     margin-top: 3px;
 }
+
+/* .light-and-water_tooltip {
+    position: relative;
+    display: inline-block;
+    background-color: green;
+    color: black;
+    padding: 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+} */
+
+/* .light-and-water_tooltip .gfg_text {
+    visibility: hidden;
+    min-width:100px;
+    background-color: green;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 25%;
+    left: 105%;
+}
+
+.light-and-water_tooltip:hover .gfg_text {
+    visibility: visible;
+} */
