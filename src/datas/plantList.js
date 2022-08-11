@@ -1,3 +1,4 @@
+/*
 import monstera from '../assets/monstera.jpg';
 import ficus from '../assets/ficus-lyrata-ramifies.png';
 
@@ -99,3 +100,4 @@ export const plantList = [
 		price: 12
 	}
 ]
+*/

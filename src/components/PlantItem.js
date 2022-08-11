@@ -9,7 +9,7 @@ function PlantItem({ id, category, cover, name, water, light, price, isSpecialOf
       key={`${id}-${name}`}
       className='bdpc-plant-item'
     >
-      <img src={cover} alt={`${name} cover`} className='bdpc-plant-item-cover' />
+      <img src={`../images/${cover}.jpg`} alt={`${name} cover`} className='bdpc-plant-item-cover' />
       {name} {isBestSale && category === "classique" && <div className='bdpc-best-sale'>Best Sale !</div>}
       {isSpecialOffer ? <div className='bdpc-sales'>En solde !</div> : null}
       <div>

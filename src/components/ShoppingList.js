@@ -1,11 +1,11 @@
 import Categories from './Categories.js';
 import PlantItem from './PlantItem.js';
 
-function ShoppingList({ cart, updateCart, addToCart, sortByCategory, plants, addCategoryToShop }) {
+function ShoppingList({ cart, updateCart, addToCart, sortByCategory, plants, addCategoryToShop, categories }) {
     return (
         <div className='shopping-list'>
             <div className="shopping-list__select-category-btn">
-                <Categories sortByCategory={sortByCategory} addCategoryToShop={addCategoryToShop} />
+                <Categories sortByCategory={sortByCategory} addCategoryToShop={addCategoryToShop} categories={categories} />
             </div>
             <ul className='bdpc-plant-list'>
                 {plants.map(({ id, category, cover, name, water, light, price, isSpecialOffer, isBestSale }) => (

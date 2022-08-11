@@ -1,12 +1,7 @@
 import React from 'react';
 import { MdSettingsBackupRestore } from 'react-icons/md';
-import { plantList } from '../datas/plantList.js';
 
-function Categories({ sortByCategory, addCategoryToShop }) {
-    const categories = plantList.reduce(
-        (acc, plant) => acc.includes(plant.category) ? acc : acc.concat(plant.category),
-        []
-    );
+function Categories({ sortByCategory, addCategoryToShop, categories }) {
 
     function setBtnDefault() {
         let options = document.getElementById("select").options;

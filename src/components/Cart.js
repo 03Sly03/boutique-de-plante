@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { ImCross } from 'react-icons/im';
 import { AiOutlineMinusCircle, AiOutlinePlusCircle } from 'react-icons/ai';
 
@@ -6,6 +6,7 @@ function Cart({ cart, updateCart, addToCart }) {
     const total = cart.reduce(
         (acc, plantType) => acc + plantType.amount * plantType.price, 0
     )
+    const [isCartOpen, setIsCartOpen] = useState(true);
 
     function handleItemCartDelete(name) {
         updateCart(cart.filter((itemCart) => itemCart.name !== name));
@@ -29,8 +30,12 @@ function Cart({ cart, updateCart, addToCart }) {
         window.localStorage.setItem('MyCart', JSON.stringify(cart));
     }, [cart])
 
-    return (
+    return isCartOpen ? (
         <div className='bdpc-cart'>
+            <div className="bdpc-cart_btn-cart">
+                <button className="bdpc-cart__btn-Open-Close" onClick={() => setIsCartOpen(false)}>Fermer</button>
+            </div>
+
             <h2>Panier</h2>
             {
                 cart.map(({ name, price, amount }, index) => (
@@ -44,6 +49,13 @@ function Cart({ cart, updateCart, addToCart }) {
             <div className="bdpc-cart__btn-frame">
                 <button className="bdpc-cart__btn" onClick={() => updateCart([])}>Vider le panier</button>
             </div>
+        </div>
+    ) : (
+        <div className='bdpc-cart'>
+            <div className="bdpc-cart_btn-cart">
+                <button className="bdpc-cart__btn-Open-Close" onClick={() => setIsCartOpen(true)}>Ouvrir</button>
+            </div>
+            <h3>Votre panier est vide !</h3>
         </div>
     )
 }
