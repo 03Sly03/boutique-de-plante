@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import '../styles/app.css';
+import '../styles/main.css';
 import Banner from './Banner';
 import Cart from './Cart';
 import Footer from './Footer';
