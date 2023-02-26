@@ -2,7 +2,12 @@
   padding: 32px;
   color: white;
   background-color: #31b572;
-  min-width: 250px;
+  min-width: 200px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .bdpc-cart__btn-frame {
@@ -24,14 +29,15 @@
 
 .bdpc-cart_btn-cart {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   width: 100%;
+  height: auto;
 }
 
 .bdpc-cart__btn-Open-Close {
   background-color: white;
   padding: 10px;
-  width: 60px;
+  width: fit-content;
   border: none;
   border-radius: 20px;
   cursor: pointer;

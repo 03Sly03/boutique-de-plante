@@ -98,8 +98,8 @@ function App() {
   return (
     <div>
       <Banner />
+      <Cart cart={cart} updateCart={updateCart} addToCart={addToCart} />
       <div className="shop">
-        <Cart cart={cart} updateCart={updateCart} addToCart={addToCart} />
         <ShoppingList
           cart={cart}
           updateCart={updateCart}
