@@ -9,9 +9,9 @@
 @import './categories.css';
 
 .shop {
-    display: flex;
+  display: flex;
 }
 
 * {
-    outline: none;
+  outline: none;
 }

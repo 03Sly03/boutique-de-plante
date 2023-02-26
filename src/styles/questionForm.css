@@ -1,16 +1,18 @@
 .question-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
 }
 
 .question-form__form {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
 }
-input, button, textarea {
-    margin-top: 20px;
-    padding: 15px;
+input,
+button,
+textarea {
+  margin-top: 20px;
+  padding: 15px;
 }

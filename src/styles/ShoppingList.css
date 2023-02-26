@@ -5,47 +5,47 @@
 } */
 
 .shopping-list__select-category-btn {
-	margin-left: 50px;
+  margin-left: 50px;
 }
 
 .bdpc-plant-list {
-	list-style-type: none;
-	padding: 32px;
-	display: flex;
-	flex-wrap: wrap;
-	max-width: 800px;
+  list-style-type: none;
+  padding: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
 }
 
 .bdpc-plant-item {
-	border: solid 2px black;
-	border-radius: 20px;
-	/* height: 150px;
+  border: solid 2px black;
+  border-radius: 20px;
+  /* height: 150px;
 	width: 150px; */
-	margin: 10px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	position: relative;
-	padding-bottom: 80px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 80px;
 }
 
 .bdpc-sales {
-	position: absolute;
-	right: 0px;
-	top: 20px;
-	font-weight: 500;
-	color: white;
-	padding: 5px 10px;
-	background-color: #31b572;
+  position: absolute;
+  right: 0px;
+  top: 20px;
+  font-weight: 500;
+  color: white;
+  padding: 5px 10px;
+  background-color: #31b572;
 }
 
 .bdpc-best-sale {
-	position: absolute;
-	left: 0px;
-	top: 20px;
-	font-weight: 500;
-	color: white;
-	padding: 5px 10px;
-	background-color: red;
+  position: absolute;
+  left: 0px;
+  top: 20px;
+  font-weight: 500;
+  color: white;
+  padding: 5px 10px;
+  background-color: red;
 }
